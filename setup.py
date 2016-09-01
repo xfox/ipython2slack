@@ -5,7 +5,7 @@ setup(
     version='0.1.0',
     description='Sending infromation fron IPython console to Slack chanel',
     long_description='',
-    url='https://github.com/ilazarev/',
+    url='https://github.com/xfox/ipython2slack',
     author='Ivan Lazarev',
     author_email='ilazarev@gmail.com',
     license='MIT',

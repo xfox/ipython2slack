@@ -17,7 +17,11 @@ class Slack(Magics):
         self.client = None
 
     def parse_line(self, line):
-        return line.split()
+        parts = line.split()
+        if len(parts) > 1:
+            return parts
+        
+        return None, parts[0]
 
     @line_magic
     def slack_setup(self, line, cell=None):
@@ -28,7 +32,12 @@ class Slack(Magics):
     def slack(self, line, cell):
         with io.capture_output() as captured:
             res = self.shell.run_cell(cell)
+
         print captured
+
+        if not captured and not line:
+            return
+
         self.client.api_call(
             'chat.postMessage',
             channel=self.channel,
