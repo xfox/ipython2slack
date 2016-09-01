@@ -20,7 +20,7 @@ class Slack(Magics):
         parts = line.split()
         if len(parts) > 1:
             return parts
-        
+
         return None, parts[0]
 
     @line_magic
