@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='ipython2slack',
-    version='0.1.0',
+    version='0.1.2',
     description='Sending infromation fron IPython console to Slack chanel',
     long_description='',
     url='https://github.com/xfox/ipython2slack',
